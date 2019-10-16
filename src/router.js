@@ -6,7 +6,7 @@ import store from '@/store.js';
 Vue.use(Router);
 
 const router = new Router({
-    mode: 'history',
+    mode: process.env.CORDOVA_PLATFORM ? 'hash' : 'history',
     base: process.env.BASE_URL,
     routes: [
         {
